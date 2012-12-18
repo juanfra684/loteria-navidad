@@ -1,0 +1,59 @@
+#!/usr/bin/env python3.2
+
+# Copyright (c) 2012 Juan Francisco Cantero Hurtado <iam@juanfra.info>
+#
+# Permission to use, copy, modify, and distribute this software for any
+# purpose with or without fee is hereby granted, provided that the above
+# copyright notice and this permission notice appear in all copies.
+#
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+# WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+# ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+# WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+# ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+# OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+import json
+import urllib.request
+
+def estado_sorteo():
+	url_elpais = 'http://api.elpais.com/ws/LoteriaNavidadPremiados?s=1'
+	respuesta = urllib.request.urlopen(url_elpais)
+	contenido = respuesta.read()
+	datos = json.loads(contenido.decode('utf8').replace('info=', ''))
+	status = datos['status']
+	print('\n================================================')
+	if status == 0:
+		print('El sorteo no ha comenzado.')
+	elif status == 1:
+		print('El sorteo ha empezado. Lista de premios parcial.')
+	elif status == 2:
+		print('Sorteo terminado. Lista de premios provisional.')
+	elif status == 3:
+		print('Sorteo terminado. Lista de premios semioficial.')
+	elif status == 4:
+		print('Sorteo terminado. Lista de premios oficial.')
+	print('================================================\n')
+
+def consultar(n):
+	url_elpais = 'http://api.elpais.com/ws/LoteriaNavidadPremiados?n=' + n
+	respuesta = urllib.request.urlopen(url_elpais)
+	contenido = respuesta.read()
+	datos = json.loads(contenido.decode('utf8').replace('busqueda=', ''))
+	premio = float(datos['premio'])
+	return premio
+
+estado_sorteo()
+
+fichero_jugados = open('mis_numeros.txt', 'r')
+
+for linea in fichero_jugados:
+	numero, jugado = linea.rstrip('\n').replace(' ', '').split(':')
+	ganado_decimo = consultar(numero)
+	he_ganado = max(float(jugado) * ganado_decimo / 20, 0)
+	print('Número: ' + numero,
+		'Jugado: ' + jugado + ' €',
+		'Ganado: ' + '{0:.2f}'.format(he_ganado) + ' €',
+		sep='\t|\t')
+
