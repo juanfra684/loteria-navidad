@@ -77,10 +77,10 @@ hacerte una cuenta en [bitbucket][6] y crear un [pull request][5].
 
 ### Agradecimientos
 
-A El País por su API que este año me va a quitar mucho trabajo.
+A [El País][1] por su API que este año me va a quitar mucho trabajo.
 
-A la gente de #python en FreeNode, en especial a kevlarman, por recordarme que
-existe `max()`.
+A la gente de [#python][8] en [FreeNode][9], en especial a kevlarman, por
+recordarme que existe `max()`.
 
 A todas las personas que han convertido Internet en un libro de referencia
 rápida para cualquier lenguaje de programación.
@@ -93,3 +93,5 @@ rápida para cualquier lenguaje de programación.
 [5]: http://bitbucket.org/juanfra684/loteria-navidad-2012/pull-requests
 [6]: https://bitbucket.org/
 [7]: http://mercurial.selenic.com/
+[8]: irc://chat.freenode.net/#python
+[9]: http://freenode.net
