@@ -50,7 +50,7 @@ versiones de [Python 3][2], pero no lo he probado.
 **No me hago reponsable de los fallos que pueda tener el script, ni el API. Tú
 eres el único responsable de comprobar adecuadamente tus números.**
 
-### Bugs y modificaciones
+### Reporte de bugs y modificaciones
 
 En esta misma web tienes un [tracker][4] en el que reportar bugs, que no
 deberían ser muchos porque el código no puede ser más pequeño, pero
@@ -58,6 +58,13 @@ conociéndome seguro que he olvidado algo.
 
 Si quieres modificar el código, solo necesitas tener [mercurial][7] instalado,
 hacerte una cuenta en [bitbucket][6] y crear un [pull request][5].
+
+### Bugs conocidos
+
+Si tu terminal no soporta correctamente utf8 verás un error del tipo
+`UnicodeEncodeError`. Lo puedes solucionar editando el fichero *"comprobar.py"*
+con cualquier editor de texto y quitando todos los caracteres no soportados,
+como los acentos y los *€*.
 
 ### Licencia
 
