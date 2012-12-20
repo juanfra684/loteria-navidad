@@ -34,12 +34,8 @@ puntos y la cantidad que juegas.
 Si el dinero que juegas contiene céntimos, tienes que usar un punto como
 separador, ya que es lo que usa [Python][2] para los cálculos (y no me apetece
 cambiar todos los puntos). Es decir, que si juegas *"un euro y cincuenta
-céntimos"* lo que tienes que escribir en el fichero es *"1.50"*.
-
-El API de [El País][1] no permite utilizar ceros a la izquierda (y otra vez,
-tampoco me apetece quitarlos) así que en el caso de que juegues un número menor
-de cinco cifras, debes de escribirlo sin los ceros a la izquierda. Dicho de
-otra forma, si juegas el *"04321"* lo que tienes que escribir es *"4321"*.
+céntimos"* lo que tienes que escribir en el fichero es *"1.50"*. Como ya
+supondrás no puedes usar el punto para marcar los miles.
 
 El script utiliza un [shebang][3] que permite ejecutarlo en sistemas Unix
 modernos que tengan [Python 3.2][2] instalado simplemente con el comando
@@ -92,6 +88,7 @@ recordarme que existe `max()`.
 A todas las personas que han convertido Internet en un libro de referencia
 rápida para cualquier lenguaje de programación.
 
+A Alberto Fernández por las mejoras al script.
 
 [1]: http://www.elpais.com
 [2]: http://www.python.org
