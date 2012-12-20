@@ -23,18 +23,18 @@ def estado_sorteo():
 	contenido = respuesta.read()
 	datos = json.loads(contenido.decode('utf8').replace('info=', ''))
 	status = datos['status']
-	print('\n================================================')
+	estado = None
 	if status == 0:
-		print('El sorteo no ha comenzado.')
+		estado = 'El sorteo no ha comenzado.'
 	elif status == 1:
-		print('El sorteo ha empezado. Lista de premios parcial.')
+		estado = 'El sorteo ha empezado. Lista de premios parcial.'
 	elif status == 2:
-		print('Sorteo terminado. Lista de premios provisional.')
+		estado = 'Sorteo terminado. Lista de premios provisional.'
 	elif status == 3:
-		print('Sorteo terminado. Lista de premios semioficial.')
+		estado = 'Sorteo terminado. Lista de premios semioficial.'
 	elif status == 4:
-		print('Sorteo terminado. Lista de premios oficial.')
-	print('================================================\n')
+		estado = 'Sorteo terminado. Lista de premios oficial.'
+	print('\n=====>', estado, '\n\n')
 
 def consultar(n):
 	url_elpais = 'http://api.elpais.com/ws/LoteriaNavidadPremiados?n=' + n
@@ -63,7 +63,7 @@ for linea in fichero_jugados:
 		'Ganado: ' + '{0:10.2f}'.format(he_ganado) + ' €',
 		sep='\t|\t')
 
-print('\n================================================\n')
+print('\n===========================')
 print('Total Jugado = ' + '{0:10.2f}'.format(total_jugado) + ' €')
 print('Total Ganado = ' + '{0:10.2f}'.format(total_ganado) + ' €')
 print('Saldo        = ' + '{0:10.2f}'.format(total_ganado-total_jugado) + ' €')
