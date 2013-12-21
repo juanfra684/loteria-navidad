@@ -1,5 +1,5 @@
-Comprobador (para perezosos) de premios en la Lotería de Navidad 2012
----------------------------------------------------------------------
+Comprobador (para perezosos) de premios en la Lotería de Navidad
+----------------------------------------------------------------
 
 Cada año en mi casa hay varias decenas de participaciones de la Lotería de
 Navidad entre las regaladas y las compradas. Cuando llega el día 22 de
@@ -38,9 +38,9 @@ céntimos"* lo que tienes que escribir en el fichero es *"1.50"*. Como ya
 supondrás no puedes usar el punto para marcar los miles.
 
 El script utiliza un [shebang][3] que permite ejecutarlo en sistemas Unix
-modernos que tengan [Python 3.2][2] instalado simplemente con el comando
+modernos que tengan [Python 3.3][2] instalado simplemente con el comando
 `./comprobar.py`. En el caso de Windows lo puedes ejecutar desde el terminal
-con `python3.2 comprobar.py`. Es posible que también funcione con otras
+con `python3.3 comprobar.py`. Es posible que también funcione con otras
 versiones de [Python 3][2], pero no lo he probado.
 
 **No me hago reponsable de los fallos que pueda tener el script, ni el API. Tú
@@ -93,8 +93,8 @@ A Alberto Fernández por las mejoras al script.
 [1]: http://www.elpais.com
 [2]: http://www.python.org
 [3]: http://en.wikipedia.org/wiki/Shebang_(Unix)
-[4]: http://bitbucket.org/juanfra684/loteria-navidad-2012/issues
-[5]: http://bitbucket.org/juanfra684/loteria-navidad-2012/pull-requests
+[4]: http://bitbucket.org/juanfra684/loteria-navidad/issues
+[5]: http://bitbucket.org/juanfra684/loteria-navidad/pull-requests
 [6]: https://bitbucket.org/
 [7]: http://mercurial.selenic.com/
 [8]: irc://chat.freenode.net/#python
