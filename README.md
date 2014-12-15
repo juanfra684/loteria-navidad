@@ -38,9 +38,9 @@ céntimos"* lo que tienes que escribir en el fichero es *"1.50"*. Como ya
 supondrás no puedes usar el punto para marcar los miles.
 
 El script utiliza un [shebang][3] que permite ejecutarlo en sistemas Unix
-modernos que tengan [Python 3.3][2] instalado simplemente con el comando
+modernos que tengan [Python 3.4][2] instalado simplemente con el comando
 `./comprobar.py`. En el caso de Windows lo puedes ejecutar desde el terminal
-con `python3.3 comprobar.py`. Es posible que también funcione con otras
+con `python3.4 comprobar.py`. Es posible que también funcione con otras
 versiones de [Python 3][2], pero no lo he probado.
 
 **No me hago reponsable de los fallos que pueda tener el script, ni el API. Tú
@@ -64,7 +64,7 @@ como los acentos y los *€*.
 
 ### Licencia
 
-> Copyright (c) 2012 Juan Francisco Cantero Hurtado <iam@juanfra.info>
+> Copyright (c) 2012-2014 Juan Francisco Cantero Hurtado <iam@juanfra.info>
 > 
 > Permission to use, copy, modify, and distribute this software for any
 > purpose with or without fee is hereby granted, provided that the above

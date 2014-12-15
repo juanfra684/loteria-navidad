@@ -1,6 +1,6 @@
-#!/usr/bin/env python3.3
+#!/usr/bin/env python3.4
 
-# Copyright (c) 2012 Juan Francisco Cantero Hurtado <iam@juanfra.info>
+# Copyright (c) 2012-2014 Juan Francisco Cantero Hurtado <iam@juanfra.info>
 #
 # Permission to use, copy, modify, and distribute this software for any
 # purpose with or without fee is hereby granted, provided that the above
