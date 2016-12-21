@@ -8,6 +8,10 @@ con cada número, cantidad jugada y premio, que tengo que comprobar a
 mano en alguna web. Este año he decidido ser más práctico y aprovechar
 las bondades de la programación para automatizar esta tarea.
 
+### Descarga
+
+https://bitbucket.org/juanfra684/loteria-navidad/get/da4e84e87a3c.zip
+
 ### ¿Cómo usar este script?
 
 El proyecto incluye un fichero llamado *"mis_numeros.txt"* con varios
