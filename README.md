@@ -10,7 +10,7 @@ las bondades de la programación para automatizar esta tarea.
 
 ### Descarga
 
-https://bitbucket.org/juanfra684/loteria-navidad/get/da4e84e87a3c.zip
+https://bitbucket.org/juanfra684/loteria-navidad/get/tip.zip
 
 ### ¿Cómo usar este script?
 
