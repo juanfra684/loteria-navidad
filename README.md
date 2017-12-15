@@ -27,10 +27,9 @@ es *"1.50"*. Como ya supondrás no puedes usar el punto para marcar los
 miles.
 
 El script utiliza un [shebang][3] que permite ejecutarlo en sistemas
-Unix modernos que tengan [Python 3.5][2] instalado simplemente con el
+Unix modernos que tengan [Python 3][2] instalado simplemente con el
 comando `./comprobar.py`. En el caso de Windows lo puedes ejecutar
-desde el terminal con `python3.5 comprobar.py`. Es posible que también
-funcione con otras versiones de [Python 3][2].
+desde el terminal con `python3 comprobar.py`.
 
 **No me hago reponsable de los fallos que pueda tener el script, ni el
 API. Tú eres el único responsable de comprobar adecuadamente tus
@@ -39,8 +38,7 @@ números.**
 ### Reporte de bugs y modificaciones
 
 En esta misma web tienes un [tracker][4] en el que reportar bugs, que
-no deberían ser muchos porque el código no puede ser más pequeño, pero
-conociéndome seguro que he olvidado algo.
+no deberían ser muchos porque el código no puede ser más pequeño.
 
 Si quieres que añada alguna modificación al código, solo necesitas
 tener [mercurial][7] instalado, hacerte una cuenta en [bitbucket][6] y
@@ -55,7 +53,7 @@ caracteres no soportados, como los acentos y los *€*.
 
 ### Licencia
 
-> Copyright (c) 2012-2015 Juan Francisco Cantero Hurtado <iam@juanfra.info>
+> Copyright (c) 2012-2017 Juan Francisco Cantero Hurtado <iam@juanfra.info>
 > 
 > Permission to use, copy, modify, and distribute this software for any
 > purpose with or without fee is hereby granted, provided that the above
