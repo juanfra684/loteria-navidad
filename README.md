@@ -17,19 +17,16 @@ https://bitbucket.org/juanfra684/loteria-navidad/get/tip.zip
 El proyecto incluye un fichero llamado *"mis_numeros.txt"* con varios
 números de ejemplo. Lo único que tienes que hacer es borrar el
 contenido y añadir tus números. El formato es muy sencillo, tan solo
-tienes que añadir un número, dos puntos y la cantidad que juegas.
+tienes que añadir un número, dos puntos (*":"*) y la cantidad que juegas.
 
-Si el dinero que juegas contiene céntimos, tienes que usar un punto
-como separador, ya que es lo que usa [Python][2] para los cálculos (y
-no me apetece cambiar todos los puntos). Es decir, que si juegas *"un
-euro y cincuenta céntimos"* lo que tienes que escribir en el fichero
-es *"1.50"*. Como ya supondrás no puedes usar el punto para marcar los
-miles.
+Si el dinero que juegas contiene céntimos, tienes que usar una coma como
+separador. Es decir, que si juegas *"un euro y cincuenta céntimos"* lo que
+tienes que escribir en el fichero es *"1,50"*. No puedes usar el punto para
+marcar los miles.
 
 El script utiliza un [shebang][3] que permite ejecutarlo en sistemas
 Unix modernos que tengan [Python 3][2] instalado simplemente con el
-comando `./comprobar.py`. En el caso de Windows lo puedes ejecutar
-desde el terminal con `python3 comprobar.py`.
+comando `./comprobar.py`.
 
 **No me hago reponsable de los fallos que pueda tener el script, ni el
 API. Tú eres el único responsable de comprobar adecuadamente tus
