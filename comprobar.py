@@ -16,6 +16,13 @@
 
 import json
 import urllib.request
+import platform
+
+# cmd.exe con la fuente por defecto (Raster Fonts) no puede mostrar €
+if platform.system() is 'Windows':
+    EUR = 'EUR'
+else:
+    EUR = '€'
 
 def estado_sorteo():
     url_elpais = 'http://api.elpais.com/ws/LoteriaNavidadPremiados?s=1'
@@ -51,19 +58,22 @@ fichero_jugados = open('mis_numeros.txt', 'r')
 total_ganado = 0.0
 total_jugado = 0.0
 for linea in fichero_jugados:
-    linea_limpia = linea.rstrip('\n').replace(' ', '')
+    linea_limpia = linea.rstrip('\n').replace(' ', '').replace(',', '.').replace('=', ':')
     if linea_limpia == '': continue
-    numero, jugado = linea.rstrip('\n').replace(' ', '').split(':')
+    numero, jugado = linea.rstrip('\n').replace(' ', '').replace(',', '.').replace('=', ':').split(':')
     ganado_decimo = consultar(str(int(numero)))
     he_ganado = max(float(jugado) * ganado_decimo / 20, 0)
     total_ganado += he_ganado
     total_jugado += float(jugado)
     print('Número: ' + '{0:05d}'.format(int(numero)),
-        'Jugado: ' + '{0:6.2f}'.format(float(jugado)) + ' €',
-        'Ganado: ' + '{0:10.2f}'.format(he_ganado) + ' €',
+        'Jugado: ' + '{0:6.2f}'.format(float(jugado)) + ' ' + EUR,
+        'Ganado: ' + '{0:10.2f}'.format(he_ganado) + ' ' + EUR,
         sep='\t|\t')
 
-print('\n===========================')
-print('Total Jugado = ' + '{0:10.2f}'.format(total_jugado) + ' €')
-print('Total Ganado = ' + '{0:10.2f}'.format(total_ganado) + ' €')
-print('Saldo        = ' + '{0:10.2f}'.format(total_ganado-total_jugado) + ' €')
+print('\n=============================')
+print('Total Jugado = ' + '{0:10.2f}'.format(total_jugado), EUR)
+print('Total Ganado = ' + '{0:10.2f}'.format(total_ganado), EUR)
+print('Saldo        = ' + '{0:10.2f}'.format(total_ganado-total_jugado), EUR)
+
+if platform.system() is 'Windows':
+    input()
