@@ -25,7 +25,7 @@ else:
     EUR = '€'
 
 def estado_sorteo():
-    url_elpais = 'http://api.elpais.com/ws/LoteriaNavidadPremiados?s=1'
+    url_elpais = 'https://api.elpais.com/ws/LoteriaNavidadPremiados?s=1'
     respuesta = urllib.request.urlopen(url_elpais)
     contenido = respuesta.read()
     datos = json.loads(contenido.decode('utf8').replace('info=', ''))
@@ -44,7 +44,7 @@ def estado_sorteo():
     print('\n=====>', estado, '\n\n')
 
 def consultar(n):
-    url_elpais = 'http://api.elpais.com/ws/LoteriaNavidadPremiados?n=' + n
+    url_elpais = 'https://api.elpais.com/ws/LoteriaNavidadPremiados?n=' + n
     respuesta = urllib.request.urlopen(url_elpais)
     contenido = respuesta.read()
     datos = json.loads(contenido.decode('utf8').replace('busqueda=', ''))
