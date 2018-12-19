@@ -8,7 +8,18 @@ con cada número, cantidad jugada y premio, que tengo que comprobar a
 mano en alguna web. Este año he decidido ser más práctico y aprovechar
 las bondades de la programación para automatizar esta tarea.
 
-### Descarga
+### Descarga para Windows y MacOS
+
+Si usas Windows o MacOS, solo tienes que descargar el siguiente fichero zip y
+descomprimirlo. Incluye instrucciones especificas para tu sistema y no requiere
+que instales nada más. El resto de instrucciones de este texto es para usuarios
+avanzados.
+
+Windows: https://bitbucket.org/juanfra684/loteria-navidad/downloads/loteria-windows.zip
+
+MacOS: https://bitbucket.org/juanfra684/loteria-navidad/downloads/loteria-macos.zip
+
+### Descarga directa del código
 
 https://bitbucket.org/juanfra684/loteria-navidad/get/tip.zip
 
