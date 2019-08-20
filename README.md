@@ -15,13 +15,13 @@ descomprimirlo. Incluye instrucciones especificas para tu sistema y no requiere
 que instales nada más. El resto de instrucciones de este texto es para usuarios
 avanzados.
 
-Windows: https://bitbucket.org/juanfra684/loteria-navidad/downloads/loteria-windows.zip
+Windows: https://github.com/juanfra684/loteria-navidad/raw/master/binarios/loteria-windows.zip
 
-MacOS: https://bitbucket.org/juanfra684/loteria-navidad/downloads/loteria-macos.zip
+MacOS: https://github.com/juanfra684/loteria-navidad/raw/master/binarios/loteria-macos.zip
 
 ### Descarga directa del código
 
-https://bitbucket.org/juanfra684/loteria-navidad/get/tip.zip
+https://github.com/juanfra684/loteria-navidad/archive/master.zip
 
 ### ¿Cómo usar este script?
 
@@ -49,7 +49,7 @@ En esta misma web tienes un [tracker][4] en el que reportar bugs, que
 no deberían ser muchos porque el código no puede ser más pequeño.
 
 Si quieres que añada alguna modificación al código, solo necesitas
-tener [mercurial][7] instalado, hacerte una cuenta en [bitbucket][6] y
+tener [git][7] instalado, hacerte una cuenta en [github][6] y
 crear un [pull request][5].
 
 ### Bugs conocidos
@@ -61,7 +61,7 @@ caracteres no soportados, como los acentos y los *€*.
 
 ### Licencia
 
-> Copyright (c) 2012-2017 Juan Francisco Cantero Hurtado <iam@juanfra.info>
+> Copyright (c) 2012-2019 Juan Francisco Cantero Hurtado <iam@juanfra.info>
 > 
 > Permission to use, copy, modify, and distribute this software for any
 > purpose with or without fee is hereby granted, provided that the above
@@ -90,9 +90,9 @@ A Alberto Fernández por las mejoras al script.
 [1]: http://www.elpais.com
 [2]: http://www.python.org
 [3]: http://en.wikipedia.org/wiki/Shebang_(Unix)
-[4]: http://bitbucket.org/juanfra684/loteria-navidad/issues
-[5]: http://bitbucket.org/juanfra684/loteria-navidad/pull-requests
-[6]: https://bitbucket.org/
-[7]: http://mercurial.selenic.com/
+[4]: https://github.com/juanfra684/loteria-navidad/issues
+[5]: https://github.com/juanfra684/loteria-navidad/pulls
+[6]: https://github.com/
+[7]: https://git-scm.com/
 [8]: irc://chat.freenode.net/#python
 [9]: http://freenode.net
