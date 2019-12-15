@@ -19,7 +19,7 @@ import urllib.request
 import platform
 
 # cmd.exe con la fuente por defecto (Raster Fonts) no puede mostrar €
-if platform.system() is "Windows":
+if platform.system() == "Windows":
     EUR = "EUR"
 else:
     EUR = "€"
@@ -89,5 +89,5 @@ print("Total Jugado = " + "{0:10.2f}".format(total_jugado), EUR)
 print("Total Ganado = " + "{0:10.2f}".format(total_ganado), EUR)
 print("Saldo        = " + "{0:10.2f}".format(total_ganado - total_jugado), EUR)
 
-if platform.system() is "Windows":
+if platform.system() == "Windows":
     input()
