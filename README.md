@@ -1,12 +1,12 @@
 Comprobador (para perezosos) de premios en la Lotería de Navidad
 ----------------------------------------------------------------
 
-Cada año en mi casa hay varias decenas de participaciones de la
-Lotería de Navidad entre las regaladas y las compradas. Cuando llega
-el día 22 de diciembre, por la tarde me toca hacer una hoja de cálculo
-con cada número, cantidad jugada y premio, que tengo que comprobar a
-mano en alguna web. Este año he decidido ser más práctico y aprovechar
-las bondades de la programación para automatizar esta tarea.
+Cada año en mi casa hay varias decenas de participaciones de la Lotería de
+Navidad entre las regaladas y las compradas. Cuando llega el día 22 de
+diciembre, por la tarde me toca hacer una hoja de cálculo con cada número,
+cantidad jugada y premio, que tengo que comprobar a mano en alguna web. Este
+año he decidido ser más práctico y aprovechar las bondades de la programación
+para automatizar esta tarea.
 
 ### Descarga para Windows y MacOS
 
@@ -25,19 +25,21 @@ https://codeberg.org/juanfra684/loteria-navidad/archive/master.zip
 
 ### ¿Cómo usar este script?
 
-El proyecto incluye un fichero llamado *"mis_numeros.txt"* con varios
-números de ejemplo. Lo único que tienes que hacer es borrar el
-contenido y añadir tus números. El formato es muy sencillo, tan solo
-tienes que añadir un número, dos puntos (*":"*) y la cantidad que juegas.
+El proyecto incluye un fichero llamado *"mis_numeros.txt"* con varios números
+de ejemplo. Lo único que tienes que hacer es borrar el contenido y añadir tus
+números. El formato es muy sencillo, tan solo tienes que añadir un número, dos
+puntos (*":"*) y la cantidad que juegas.
 
-Si el dinero que juegas contiene céntimos, tienes que usar una coma como
-separador. Es decir, que si juegas *"un euro y cincuenta céntimos"* lo que
-tienes que escribir en el fichero es *"1,50"*. No puedes usar el punto para
-marcar los miles.
+Si el dinero que juegas contiene céntimos, usa una coma o punto como separador.
+No uses puntos como separador de miles. Es decir, que si juegas *"un euro y
+cincuenta céntimos"* lo que tienes que escribir en el fichero es *"1,50"*.
 
-El script utiliza un [shebang][3] que permite ejecutarlo en sistemas
-Unix modernos que tengan [Python 3][2] instalado simplemente con el
-comando `./comprobar.py`.
+El script utiliza un [shebang][3] que permite ejecutarlo en sistemas Unix
+modernos que tengan [Python 3][2] instalado simplemente con el comando
+`./comprobar.py`.
+
+También hay una versión escrita en Ruby por si lo prefieres. En ese caso, solo
+tienes que tener instalado Ruby, no hacen falta gemas de terceros.
 
 **No me hago reponsable de los fallos que pueda tener el script, ni el
 API. Tú eres el único responsable de comprobar adecuadamente tus
@@ -45,23 +47,23 @@ números.**
 
 ### Reporte de bugs y modificaciones
 
-En esta misma web tienes un [tracker][4] en el que reportar bugs, que
-no deberían ser muchos porque el código no puede ser más pequeño.
+En esta misma web tienes un [tracker][4] en el que reportar bugs, que no
+deberían ser muchos porque el código no puede ser más pequeño.
 
-Si quieres que añada alguna modificación al código, solo necesitas
-tener [git][7] instalado, hacerte una cuenta en [codeberg][6] y
-crear un [pull request][5].
+Si quieres que añada alguna modificación al código, solo necesitas tener
+[git][7] instalado, hacerte una cuenta en [codeberg][6] y crear un [pull
+request][5].
 
 ### Bugs conocidos
 
 Si tu terminal no soporta correctamente utf8 verás un error del tipo
-`UnicodeEncodeError`. Lo puedes solucionar editando el fichero
-*"comprobar.py"* con cualquier editor de texto y quitando todos los
-caracteres no soportados, como los acentos y los *€*.
+`UnicodeEncodeError`. Lo puedes solucionar editando el fichero *"comprobar.py"*
+con cualquier editor de texto y quitando todos los caracteres no soportados,
+como los acentos y los *€*.
 
 ### Licencia
 
-> Copyright (c) 2012-2020 Juan Francisco Cantero Hurtado <iam@juanfra.info>
+> Copyright (c) 2012-2022 Juan Francisco Cantero Hurtado https://juanfra.eu.org
 > 
 > Permission to use, copy, modify, and distribute this software for any
 > purpose with or without fee is hereby granted, provided that the above
