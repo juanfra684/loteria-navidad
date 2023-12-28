@@ -132,17 +132,16 @@ function printLotteryStatus(statusCode) {
   console.log(STATUS_MESSAGE[statusCode]);
 }
 
-function printResultByNumber(numberPlayed, moneyPlayed, moneyWinned) {
+function printResultByNumber(numberPlayed, moneyPlayed, moneyWonned) {
   console.log(`\n=============================`);
-  console.log(`Número: ${numberPlayed}`),
+  console.log(`Número: ${numberPlayed}`);
   console.log(`Jugado: ${moneyPlayed} ${getCurrency()}`);
-  console.log(`Ganado: ${moneyWinned} ${getCurrency()}`);
+  console.log(`Ganado: ${moneyWonned} ${getCurrency()}`);
 }
 
-function printResultTotal(totalPlayed, totalWinned) {
+function printResultTotal(totalPlayed, totalWonned) {
   console.log(`\n=============================`);
   console.log(`Total Jugado = ${totalPlayed} ${getCurrency()}`);
-  console.log(`Total Ganado = ${totalWinned} ${getCurrency()}`);
-  console.log(`Saldo = ${totalWinned - totalPlayed} ${getCurrency()}`);
+  console.log(`Total Ganado = ${totalWonned} ${getCurrency()}`);
+  console.log(`Saldo = ${totalWonned - totalPlayed} ${getCurrency()}`);
 }
-
