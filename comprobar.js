@@ -1,12 +1,25 @@
 #!/usr/bin/env node
 
+/** Copyright (c) 2012-2019 Juan Francisco Cantero Hurtado <iam@juanfra.info>
+ *  Permission to use, copy, modify, and distribute this software for any
+ *  purpose with or without fee is hereby granted, provided that the above
+ *  copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ */
+
 const https = require('node:https');
 const fs = require('node:fs/promises');
 const os = require('node:os');
 
 const FILE_PATH = './mis_numeros.txt';
 const API_URL = 'https://api.elpais.com/ws/LoteriaNavidadPremiados';
-
 
 (async function init() {
   const [playedNumbers, lotteryStatus] = await Promise.all([
@@ -15,7 +28,7 @@ const API_URL = 'https://api.elpais.com/ws/LoteriaNavidadPremiados';
   ]);
 
   printLotteryStatus(lotteryStatus);
-  let totalWinned = 0.0;
+  let totalWonned = 0.0;
   let totalPlayed = 0.0;
 
   for (let playedNumber of playedNumbers) {
@@ -24,15 +37,15 @@ const API_URL = 'https://api.elpais.com/ws/LoteriaNavidadPremiados';
     moneyPlayed = parseFloat(moneyPlayed.trim());
     const numberInfo = await getLotteryNumberInfo(numberPlayed);
     const prize = numberInfo.hasOwnProperty('premio') ? numberInfo.premio : 0;
-    const moneyWinned = (moneyPlayed * prize) / 20;
+    const moneyWonned = (moneyPlayed * prize) / 20;
 
-    totalWinned += moneyWinned;
+    totalWonned += moneyWonned;
     totalPlayed += moneyPlayed;
 
-    printResultByNumber(numberPlayed, moneyPlayed, moneyWinned);
+    printResultByNumber(numberPlayed, moneyPlayed, moneyWonned);
   }
 
-  printResultTotal(totalPlayed, totalWinned);
+  printResultTotal(totalPlayed, totalWonned);
 })();
 
 /* cmd.exe con la fuente por defecto (Raster Fonts) no puede mostrar €  */
